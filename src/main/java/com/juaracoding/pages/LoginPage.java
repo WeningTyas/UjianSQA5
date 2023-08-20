@@ -29,6 +29,9 @@ public class LoginPage {
     @FindBy(xpath = "//div[@class='app_logo']")
     WebElement txtDashboard;
 
+    @FindBy(xpath = "//div[@class='login_logo']")
+    WebElement txtLogin;
+
     public void loginForm(String username, String password) {
         this.username.sendKeys(username);
         this.password.sendKeys(password);
@@ -42,6 +45,10 @@ public class LoginPage {
 
     public String getTxtDashboard(){
         return txtDashboard.getText();
+    }
+
+    public String getTxtLogin(){
+        return txtLogin.getText();
     }
 
     public void clear(){
